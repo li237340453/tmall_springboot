@@ -10,8 +10,13 @@ public class AdminPageController {
         return "redirect:admin_category_list";
     }
 
-    @GetMapping(value = "/redirect:admin_category_list")
+    @GetMapping(value = "/admin_category_list")
     public String listCategory() {
         return "admin/listCategory";
+    }
+
+    @GetMapping(value = "editCategory")
+    public String editCategory() {
+        return "admin/editCategory";
     }
 }
