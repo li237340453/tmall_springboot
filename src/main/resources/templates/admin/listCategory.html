@@ -31,7 +31,7 @@
                         vue.pagination = response.data;
                         // TODO 感觉模板代码有问题
                         // vue.beans = response.data.content;
-                        vue.beans = response.data.content;
+                        vue.beans = response.data;
                     });
                 },
                 add: function () {
@@ -58,7 +58,9 @@
                     if (!checkDeleteLink())
                         return;
                     var url = this.uri + "/" + id;
+                    console.log(url)
                     axios.delete(url).then(function (response) {
+                        console.log(response)
                         if (0 != response.data.length) {
                             alert(response.data);
                         } else {
