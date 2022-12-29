@@ -30,6 +30,8 @@ public class Product {
     private float promotePrice;
     private int stock;
     private Date createDate;
+    @Transient
+    private ProductImage firstProductImage;
 
     public int getId() {
         return id;
@@ -59,6 +61,10 @@ public class Product {
         return stock;
     }
 
+    public ProductImage getFirstProductImage() {
+        return firstProductImage;
+    }
+
     public Date getCreateDate() {
         return createDate;
     }
@@ -73,6 +79,10 @@ public class Product {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setFirstProductImage(ProductImage firstProductImage) {
+        this.firstProductImage = firstProductImage;
     }
 
     public void setSubTitle(String subTitle) {

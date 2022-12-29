@@ -30,7 +30,7 @@ public class AdminPageController {
         return "admin/editProperty";
     }
 
-    @GetMapping("value = /admin_propertyValue_edit")
+    @GetMapping(value = "/admin_propertyValue_edit")
     public String editPropertyValue() {
         return "admin/editPropertyValue";
     }
@@ -42,7 +42,6 @@ public class AdminPageController {
 
     @GetMapping(value = "/admin_product_list")
     public String listProduct() {
-        System.out.println("here");
         return "admin/listProduct";
     }
 
@@ -50,5 +49,16 @@ public class AdminPageController {
     public String editProduct() {
         return "admin/editProduct";
     }
+
+    @GetMapping(value = "/admin_productImage_list")
+    public String listProductImage() {
+        return "/admin/listProductImage";
+    }
+
+    @GetMapping(value = "/admin_order_list")
+    public String listOrder() {
+        return "/admin/listOrder";
+    }
+
 
 }

@@ -29,7 +29,7 @@ public class ProductService {
     }
 
     public Product get(int id) {
-        return productDAO.getReferenceById(id);
+        return productDAO.getById(id);
     }
 
     public void update(Product bean) {

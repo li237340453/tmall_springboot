@@ -32,7 +32,6 @@
                     var url = "categories/" + cid + "/" + this.uri + "?start=" + start;
                     axios.get(url).then(function (response) {
                         console.log(url)
-                        console.log("开始列举")
                         console.log(response)
                         vue.pagination = response.data
                         vue.beans = response.data.content;
@@ -45,6 +44,7 @@
                     var url = this.uri
                     this.bean.category.id = cid;
                     axios.post(url, this.bean).then(function (response) {
+                        console.log(response)
                         vue.list(0)
                         vue.bean = {id: 0, name: '', category: {id: 0}};
                     })
@@ -55,6 +55,7 @@
                     }
                     var url = this.uri + "/" + id;
                     axios.delete(url).then(function (response) {
+                        console.log(response)
                         if (0 != response.data.length) {
                             alert(response.data)
                         } else {
